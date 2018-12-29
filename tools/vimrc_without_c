@@ -252,11 +252,9 @@ nmap <leader>sd :SignifyDiff<CR>
 " ------------------------------------------------
 " For LeaderF see https://github.com/Yggdroot/LeaderF/blob/master/doc/leaderf.txt#L189-L349
 " ------------------------------------------------
-let g:Lf_WindowHeight = 0.4
-let g:Lf_PreviewCode = 1
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg'],
-            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]', '__init__.py', '.gitignore']
             \}
 let g:Lf_MruFileExclude = ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
 let g:Lf_Ctags = "/usr/local/bin/ctags"
@@ -264,6 +262,7 @@ let g:Lf_CtagsFuncOpts = {
             \ 'c': '--c-kinds=fp',
             \ 'rust': '--rust-kinds=f',
             \ }
+let g:Lf_ShortcutF = '<C-P>'
 map <leader>fm :LeaderfMru<CR>
 map <leader>ff :LeaderfFunction<CR>
 map <leader>fw :LeaderfLine<CR>
